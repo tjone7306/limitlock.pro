@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 860" width="420" height="860" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="phoneBezel" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2a2a2d"/>
+      <stop offset="1" stop-color="#141416"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#E7C873"/>
+      <stop offset="1" stop-color="#C9A24C"/>
+    </linearGradient>
+  </defs>
+  <!-- Phone body -->
+  <rect x="10" y="10" width="400" height="840" rx="56" fill="url(#phoneBezel)"/>
+  <rect x="20" y="20" width="380" height="820" rx="48" fill="#0A0A0A"/>
+  <!-- Notch -->
+  <rect x="160" y="28" width="100" height="28" rx="14" fill="#000"/>
+  <!-- Status bar -->
+  <text x="50" y="52" fill="#fff" font-size="13" font-weight="600">9:41</text>
+  <g fill="#fff" transform="translate(330,42)">
+    <rect x="0" y="2" width="16" height="10" rx="2" fill="none" stroke="#fff" stroke-width="1"/>
+    <rect x="2" y="4" width="12" height="6" rx="1"/>
+    <circle cx="30" cy="8" r="4" fill="none" stroke="#fff" stroke-width="1.2"/>
+    <path d="M26 8 a4 4 0 0 1 8 0" fill="none" stroke="#fff" stroke-width="1.2"/>
+  </g>
+
+  <!-- Top icon row -->
+  <circle cx="48" cy="86" r="17" fill="#1C1C1C"/>
+  <text x="48" y="92" text-anchor="middle" fill="#C0C0C0" font-size="15">📘</text>
+  <circle cx="86" cy="86" r="17" fill="#1C1C1C"/>
+  <text x="86" y="92" text-anchor="middle" fill="#C0C0C0" font-size="14">✈</text>
+  <!-- Mode pill -->
+  <rect x="138" y="68" width="158" height="36" rx="18" fill="#1C1C1C" stroke="#2a2a2d"/>
+  <rect x="142" y="72" width="78" height="28" rx="14" fill="#333"/>
+  <text x="181" y="91" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">Tournament</text>
+  <text x="258" y="91" text-anchor="middle" fill="#C0C0C0" font-size="11" font-weight="700" opacity="0.7">Day on Water</text>
+  <circle cx="372" cy="86" r="17" fill="#1C1C1C"/>
+  <text x="372" y="92" text-anchor="middle" fill="#C0C0C0" font-size="14">⚙</text>
+
+  <!-- Location/species pills -->
+  <rect x="128" y="118" width="82" height="26" rx="13" fill="#1C1C1C"/>
+  <text x="169" y="136" text-anchor="middle" fill="#C0C0C0" font-size="11">📍 Lake Fork</text>
+  <rect x="220" y="118" width="66" height="26" rx="13" fill="#1C1C1C"/>
+  <text x="253" y="136" text-anchor="middle" fill="#C0C0C0" font-size="11">🐟 Bass</text>
+
+  <!-- Wordmark -->
+  <text x="40" y="180" fill="#C0C0C0" font-size="11" letter-spacing="2" font-weight="800">LIMIT</text>
+  <text x="40" y="216" fill="#fff" font-size="34" font-weight="900">Lock</text>
+
+  <!-- Hero card -->
+  <rect x="32" y="234" width="356" height="112" rx="20" fill="#1C1C1C"/>
+  <text x="48" y="262" fill="#C0C0C0" font-size="10" letter-spacing="1.5" font-weight="800">TOTAL WEIGHT</text>
+  <text x="48" y="310" fill="#7DE37D" font-size="46" font-weight="900">12.48</text>
+  <text x="178" y="310" fill="#7DE37D" font-size="18" font-weight="700" opacity="0.65">lbs</text>
+  <text x="372" y="262" text-anchor="end" fill="#C0C0C0" font-size="10" letter-spacing="1.5" font-weight="800">LIMIT</text>
+  <text x="372" y="294" text-anchor="end" fill="#C0C0C0" font-size="24" font-weight="900">3/5</text>
+  <!-- fish dots -->
+  <rect x="48" y="322" width="58" height="6" rx="3" fill="#C0C0C0"/>
+  <rect x="114" y="322" width="58" height="6" rx="3" fill="#C0C0C0"/>
+  <rect x="180" y="322" width="58" height="6" rx="3" fill="#C0C0C0"/>
+  <rect x="246" y="322" width="58" height="6" rx="3" fill="#C0C0C0" opacity="0.18"/>
+  <rect x="312" y="322" width="58" height="6" rx="3" fill="#C0C0C0" opacity="0.18"/>
+
+  <!-- Fish rows -->
+  <g font-weight="700">
+    <rect x="32" y="362" width="356" height="56" rx="14" fill="#1C1C1C"/>
+    <circle cx="60" cy="390" r="14" fill="#333"/>
+    <text x="60" y="395" text-anchor="middle" fill="#C0C0C0" font-size="12">1</text>
+    <text x="84" y="396" fill="#fff" font-size="16">4.82 lbs</text>
+    <circle cx="344" cy="390" r="8" fill="#E23E3E"/>
+    <text x="366" y="394" fill="#C0C0C0" font-size="11" text-anchor="end">Red</text>
+
+    <rect x="32" y="426" width="356" height="56" rx="14" fill="#1C1C1C"/>
+    <circle cx="60" cy="454" r="14" fill="#333"/>
+    <text x="60" y="459" text-anchor="middle" fill="#C0C0C0" font-size="12">2</text>
+    <text x="84" y="460" fill="#fff" font-size="16">4.11 lbs</text>
+    <circle cx="344" cy="454" r="8" fill="#2FAE66"/>
+    <text x="374" y="458" fill="#C0C0C0" font-size="11" text-anchor="end">Green</text>
+
+    <rect x="32" y="490" width="356" height="56" rx="14" fill="#1C1C1C"/>
+    <circle cx="60" cy="518" r="14" fill="#333"/>
+    <text x="60" y="523" text-anchor="middle" fill="#C0C0C0" font-size="12">3</text>
+    <text x="84" y="524" fill="#fff" font-size="16">3.55 lbs</text>
+    <circle cx="344" cy="518" r="8" fill="#E7C873"/>
+    <text x="376" y="522" fill="#C0C0C0" font-size="11" text-anchor="end">Yellow</text>
+
+    <rect x="32" y="554" width="356" height="56" rx="14" fill="#141416" opacity="0.7"/>
+    <circle cx="60" cy="582" r="14" fill="#1C1C1C"/>
+    <text x="60" y="587" text-anchor="middle" fill="#555" font-size="12">4</text>
+    <text x="84" y="588" fill="#555" font-size="16">— —</text>
+
+    <rect x="32" y="618" width="356" height="56" rx="14" fill="#141416" opacity="0.7"/>
+    <circle cx="60" cy="646" r="14" fill="#1C1C1C"/>
+    <text x="60" y="651" text-anchor="middle" fill="#555" font-size="12">5</text>
+    <text x="84" y="652" fill="#555" font-size="16">— —</text>
+  </g>
+
+  <!-- Add button -->
+  <circle cx="210" cy="760" r="40" fill="url(#goldGrad)"/>
+  <text x="210" y="772" text-anchor="middle" fill="#0A0A0A" font-size="44" font-weight="900">+</text>
+
+  <!-- Home indicator -->
+  <rect x="160" y="822" width="100" height="5" rx="2.5" fill="#fff" opacity="0.5"/>
+</svg>

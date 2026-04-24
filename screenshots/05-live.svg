@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 860" width="420" height="860" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="phoneBezel5" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2a2a2d"/>
+      <stop offset="1" stop-color="#141416"/>
+    </linearGradient>
+    <linearGradient id="goldGrad5" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#E7C873"/>
+      <stop offset="1" stop-color="#C9A24C"/>
+    </linearGradient>
+    <linearGradient id="row1" x1="0" x2="1">
+      <stop offset="0" stop-color="#1c2a26"/>
+      <stop offset="1" stop-color="#1C1C1C"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="400" height="840" rx="56" fill="url(#phoneBezel5)"/>
+  <rect x="20" y="20" width="380" height="820" rx="48" fill="#0A0A0A"/>
+  <rect x="160" y="28" width="100" height="28" rx="14" fill="#000"/>
+  <text x="50" y="52" fill="#fff" font-size="13" font-weight="600">9:41</text>
+
+  <!-- Title -->
+  <text x="40" y="116" fill="#C0C0C0" font-size="11" letter-spacing="2" font-weight="800">LIVE TOURNAMENT</text>
+  <text x="40" y="150" fill="#fff" font-size="26" font-weight="900">Saturday Open</text>
+  <!-- Invite chip -->
+  <rect x="40" y="170" width="148" height="28" rx="14" fill="#1C1C1C" stroke="#E7C873" stroke-opacity="0.4"/>
+  <text x="56" y="188" fill="#E7C873" font-size="11" font-weight="800">🔗 INVITE · LL-7M2K</text>
+  <text x="200" y="188" fill="#9fb3ad" font-size="11">3 anglers</text>
+
+  <!-- Leaderboard header -->
+  <text x="40" y="232" fill="#E7C873" font-size="11" letter-spacing="2" font-weight="800">🏆 LEADERBOARD</text>
+
+  <!-- Row 1 -->
+  <rect x="32" y="246" width="356" height="78" rx="16" fill="url(#row1)" stroke="#E7C873" stroke-opacity="0.35"/>
+  <circle cx="64" cy="285" r="18" fill="url(#goldGrad5)"/>
+  <text x="64" y="290" text-anchor="middle" fill="#0A0A0A" font-size="14" font-weight="900">1</text>
+  <text x="92" y="278" fill="#fff" font-size="16" font-weight="800">Tim</text>
+  <text x="92" y="300" fill="#9fb3ad" font-size="12">5 of 5 fish</text>
+  <text x="372" y="280" text-anchor="end" fill="#7DE37D" font-size="22" font-weight="900">18.42</text>
+  <text x="372" y="302" text-anchor="end" fill="#9fb3ad" font-size="11">lbs</text>
+  <!-- mini fish dots -->
+  <g>
+    <rect x="92" y="308" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="116" y="308" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="140" y="308" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="164" y="308" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="188" y="308" width="20" height="4" rx="2" fill="#C0C0C0"/>
+  </g>
+
+  <!-- Row 2 -->
+  <rect x="32" y="334" width="356" height="78" rx="16" fill="#1C1C1C"/>
+  <circle cx="64" cy="373" r="18" fill="#333"/>
+  <text x="64" y="378" text-anchor="middle" fill="#C0C0C0" font-size="14" font-weight="900">2</text>
+  <text x="92" y="366" fill="#fff" font-size="16" font-weight="800">Marcus</text>
+  <text x="92" y="388" fill="#9fb3ad" font-size="12">5 of 5 fish</text>
+  <text x="372" y="368" text-anchor="end" fill="#fff" font-size="22" font-weight="900">15.87</text>
+  <text x="372" y="390" text-anchor="end" fill="#9fb3ad" font-size="11">lbs</text>
+  <g>
+    <rect x="92" y="396" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="116" y="396" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="140" y="396" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="164" y="396" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="188" y="396" width="20" height="4" rx="2" fill="#C0C0C0"/>
+  </g>
+
+  <!-- Row 3 -->
+  <rect x="32" y="422" width="356" height="78" rx="16" fill="#1C1C1C"/>
+  <circle cx="64" cy="461" r="18" fill="#333"/>
+  <text x="64" y="466" text-anchor="middle" fill="#C0C0C0" font-size="14" font-weight="900">3</text>
+  <text x="92" y="454" fill="#fff" font-size="16" font-weight="800">Drew</text>
+  <text x="92" y="476" fill="#9fb3ad" font-size="12">4 of 5 fish</text>
+  <text x="372" y="456" text-anchor="end" fill="#fff" font-size="22" font-weight="900">14.22</text>
+  <text x="372" y="478" text-anchor="end" fill="#9fb3ad" font-size="11">lbs</text>
+  <g>
+    <rect x="92" y="484" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="116" y="484" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="140" y="484" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="164" y="484" width="20" height="4" rx="2" fill="#C0C0C0"/>
+    <rect x="188" y="484" width="20" height="4" rx="2" fill="#C0C0C0" opacity="0.18"/>
+  </g>
+
+  <!-- Activity -->
+  <text x="40" y="540" fill="#E7C873" font-size="11" letter-spacing="2" font-weight="800">🎯 RECENT ACTIVITY</text>
+
+  <rect x="32" y="554" width="356" height="56" rx="14" fill="#141416"/>
+  <circle cx="58" cy="582" r="6" fill="#FF7A45"/>
+  <text x="78" y="578" fill="#fff" font-size="14" font-weight="700">Drew · 4.92 lbs</text>
+  <text x="78" y="598" fill="#9fb3ad" font-size="11">just now · cull alert</text>
+  <text x="372" y="588" text-anchor="end" fill="#FF7A45" font-size="11" font-weight="800">BIGGEST</text>
+
+  <rect x="32" y="618" width="356" height="56" rx="14" fill="#141416"/>
+  <circle cx="58" cy="646" r="6" fill="#7DE37D"/>
+  <text x="78" y="642" fill="#fff" font-size="14" font-weight="700">Tim · 3.55 lbs</text>
+  <text x="78" y="662" fill="#9fb3ad" font-size="11">3 min ago</text>
+
+  <rect x="32" y="682" width="356" height="56" rx="14" fill="#141416"/>
+  <circle cx="58" cy="710" r="6" fill="#7DE37D"/>
+  <text x="78" y="706" fill="#fff" font-size="14" font-weight="700">Marcus · 4.11 lbs</text>
+  <text x="78" y="726" fill="#9fb3ad" font-size="11">8 min ago</text>
+
+  <!-- Invite button -->
+  <rect x="32" y="754" width="356" height="56" rx="18" fill="url(#goldGrad5)"/>
+  <text x="210" y="789" text-anchor="middle" fill="#0A0A0A" font-size="16" font-weight="800">Invite friends</text>
+
+  <rect x="160" y="822" width="100" height="5" rx="2.5" fill="#fff" opacity="0.5"/>
+</svg>

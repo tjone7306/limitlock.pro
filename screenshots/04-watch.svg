@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 860" width="420" height="860" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="watchBand" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2a2a2d"/>
+      <stop offset="0.5" stop-color="#1a1a1c"/>
+      <stop offset="1" stop-color="#2a2a2d"/>
+    </linearGradient>
+    <linearGradient id="watchBezel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#3a3a3d"/>
+      <stop offset="1" stop-color="#1a1a1c"/>
+    </linearGradient>
+    <linearGradient id="goldGrad4" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#E7C873"/>
+      <stop offset="1" stop-color="#C9A24C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background lake gradient -->
+  <rect width="420" height="860" fill="#0b1112"/>
+  <!-- Band top -->
+  <path d="M140 0 L140 170 Q140 200 170 210 L250 210 Q280 200 280 170 L280 0 Z" fill="url(#watchBand)"/>
+  <!-- Band bottom -->
+  <path d="M140 860 L140 690 Q140 660 170 650 L250 650 Q280 660 280 690 L280 860 Z" fill="url(#watchBand)"/>
+  <!-- Watch body -->
+  <rect x="90" y="200" width="240" height="280" rx="52" fill="url(#watchBezel)"/>
+  <!-- Digital crown -->
+  <rect x="326" y="286" width="14" height="40" rx="4" fill="#2a2a2d"/>
+  <rect x="328" y="290" width="10" height="32" rx="3" fill="#1a1a1c"/>
+  <!-- Side button -->
+  <rect x="328" y="360" width="10" height="28" rx="3" fill="#2a2a2d"/>
+
+  <!-- Screen -->
+  <rect x="104" y="214" width="212" height="252" rx="44" fill="#000"/>
+  <!-- Watch face content -->
+  <text x="210" y="254" text-anchor="middle" fill="#C0C0C0" font-size="10" letter-spacing="1.5" font-weight="800">BAG · 3/5</text>
+  <text x="210" y="312" text-anchor="middle" fill="#7DE37D" font-size="44" font-weight="900">12.48</text>
+  <text x="210" y="336" text-anchor="middle" fill="#7DE37D" font-size="13" font-weight="700" opacity="0.7">lbs</text>
+
+  <!-- Mini fish rows -->
+  <rect x="124" y="356" width="172" height="22" rx="6" fill="#1C1C1C"/>
+  <text x="136" y="371" fill="#fff" font-size="11" font-weight="700">4.82</text>
+  <circle cx="280" cy="367" r="4" fill="#E23E3E"/>
+  <rect x="124" y="384" width="172" height="22" rx="6" fill="#1C1C1C"/>
+  <text x="136" y="399" fill="#fff" font-size="11" font-weight="700">4.11</text>
+  <circle cx="280" cy="395" r="4" fill="#2FAE66"/>
+  <rect x="124" y="412" width="172" height="22" rx="6" fill="#1C1C1C"/>
+  <text x="136" y="427" fill="#fff" font-size="11" font-weight="700">3.55</text>
+  <circle cx="280" cy="423" r="4" fill="#E7C873"/>
+
+  <!-- Log button -->
+  <rect x="130" y="442" width="160" height="18" rx="9" fill="url(#goldGrad4)"/>
+  <text x="210" y="455" text-anchor="middle" fill="#0A0A0A" font-size="10" font-weight="800">+ LOG</text>
+
+  <!-- Caption under watch -->
+  <text x="210" y="560" text-anchor="middle" fill="#fff" font-size="24" font-weight="900">On your wrist</text>
+  <text x="210" y="590" text-anchor="middle" fill="#C0C0C0" font-size="14">Log. See the bag. Know your total.</text>
+  <text x="210" y="614" text-anchor="middle" fill="#C0C0C0" font-size="14">Hands stay on the rod.</text>
+
+</svg>

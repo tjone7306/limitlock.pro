@@ -180,19 +180,26 @@
   .b4u .preview-head { display:flex; align-items:center; justify-content:space-between; margin-bottom: 14px; }
   .b4u .preview-title { font-weight: 800; font-size: 14px; }
   .b4u .preview-status { font-size: 11px; color: var(--green); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
-  .b4u .day-tiles { display:grid; grid-template-columns: repeat(7, 1fr); gap: 5px; }
-  .b4u .day {
-    background: rgba(15,32,29,0.85);
+  .b4u .feature-list { list-style:none; padding:0; margin: 0 0 14px; display: grid; gap: 8px; }
+  .b4u .feature-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 8px 10px;
+    background: rgba(15,32,29,0.7);
     border: 1px solid rgba(231,200,115,0.10);
-    border-radius: 8px;
-    padding: 10px 4px 8px;
-    text-align:center;
+    border-radius: 10px;
   }
-  .b4u .day.pick { border-color: rgba(125,227,125,0.5); background: linear-gradient(180deg, rgba(125,227,125,0.10), rgba(15,32,29,0.85)); }
-  .b4u .day-name { font-size: 9px; color: var(--muted); font-weight: 800; letter-spacing:0.1em; text-transform:uppercase; }
-  .b4u .day-icon { font-size: 18px; margin: 4px 0 2px; }
-  .b4u .day-hi { font-size: 16px; font-weight: 800; color: var(--ink); }
-  .b4u .day-lo { font-size: 10px; color: var(--muted); }
+  .b4u .feature-list .fl-icon {
+    flex-shrink: 0;
+    width: 30px; height: 30px;
+    display: grid; place-items: center;
+    background: rgba(231,200,115,0.10);
+    border: 1px solid rgba(231,200,115,0.20);
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  .b4u .feature-list li > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .b4u .feature-list strong { font-size: 13px; color: var(--ink); font-weight: 700; }
+  .b4u .feature-list span { font-size: 11px; color: var(--muted); line-height: 1.35; }
   .b4u .lakes-row {
     display:flex; gap: 8px; flex-wrap:wrap; margin-top: 14px;
     padding-top: 14px; border-top: 1px solid rgba(231,200,115,0.08);
@@ -258,7 +265,6 @@
     .live h2 { font-size: 34px; }
     .b4u-grid { grid-template-columns: 1fr; gap: 30px; }
     .b4u h2 { font-size: 32px; }
-    .b4u .day-tiles { grid-template-columns: repeat(7, 1fr); }
     section { padding: 64px 0; }
     .nav a.link { display:none; }
   }
@@ -368,40 +374,7 @@
   </div>
 </section>
 
-<!-- B4U.FISH cross-promo (revealed by JS only for Arizona visitors) -->
-<section class="b4u" id="b4u-section" aria-hidden="true">
-  <div class="wrap b4u-grid">
-    <div>
-      <span class="badge">🎣 Fishing in Arizona?</span>
-      <h2>Get the <span class="accent">7-day forecast</span> for the Phoenix lakes.</h2>
-      <p class="lead">Our sister site <strong>b4u.fish</strong> shows live conditions for Pleasant, Roosevelt, Apache, Canyon, Saguaro, and Bartlett — best fishing times, weather, lake levels, and a clean 7-day outlook so you can pick the right day before you load the boat.</p>
-      <div class="cta-row">
-        <a class="cta" href="https://b4u.fish/" target="_blank" rel="noopener">
-          Open b4u.fish
-          <span aria-hidden="true">→</span>
-        </a>
-        <span class="domain">b4u.fish</span>
-      </div>
-    </div>
-    <div class="preview" aria-hidden="true">
-      <div class="preview-head">
-        <div class="preview-title">Phoenix Lakes · 7-Day Outlook</div>
-        <div class="preview-status">● Live</div>
-      </div>
-      <div class="day-tiles" id="b4u-mini-7day">
-        <!-- Mini 7-day tiles populated by JS (only for AZ visitors) -->
-      </div>
-      <div class="lakes-row">
-        <span class="lake-chip">Lake Pleasant</span>
-        <span class="lake-chip">Roosevelt</span>
-        <span class="lake-chip">Apache</span>
-        <span class="lake-chip">Canyon</span>
-        <span class="lake-chip">Saguaro</span>
-        <span class="lake-chip">Bartlett</span>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="shots" id="screenshots">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Screens</div>
@@ -454,6 +427,45 @@
   </div>
 </section>
 
+<!-- B4U.FISH cross-promo (revealed by JS only for Arizona visitors) -->
+<section class="b4u" id="b4u-section" aria-hidden="true">
+  <div class="wrap b4u-grid">
+    <div>
+      <span class="badge">🎣 Also from us · Arizona anglers</span>
+      <h2>Heading to the Phoenix lakes? <span class="accent">Check b4u.fish first.</span></h2>
+      <p class="lead">Our sister site shows you everything you need before you load the boat — live water levels, streamflow, solunar fishing windows, weather, and AZGFD habitat structure maps. All on one page, refreshed daily.</p>
+      <div class="cta-row">
+        <a class="cta" href="https://b4u.fish/" target="_blank" rel="noopener">
+          Open b4u.fish
+          <span aria-hidden="true">→</span>
+        </a>
+        <span class="domain">b4u.fish</span>
+      </div>
+    </div>
+    <div class="preview" aria-hidden="true">
+      <div class="preview-head">
+        <div class="preview-title">What's on b4u.fish</div>
+        <div class="preview-status">● Live</div>
+      </div>
+      <ul class="feature-list">
+        <li><span class="fl-icon">💧</span><div><strong>Live water levels</strong><span>fill %, elevation, change over 30d</span></div></li>
+        <li><span class="fl-icon">📊</span><div><strong>Streamflow</strong><span>SRP/CAP in &amp; out, daily updated</span></div></li>
+        <li><span class="fl-icon">🌙</span><div><strong>Solunar fishing windows</strong><span>major &amp; minor times, moon phase</span></div></li>
+        <li><span class="fl-icon">🌤️</span><div><strong>Weather + 7-day outlook</strong><span>hourly temps, wind, rain</span></div></li>
+        <li><span class="fl-icon">🗺️</span><div><strong>Habitat structure maps</strong><span>AZGFD brush piles, depth over surface</span></div></li>
+      </ul>
+      <div class="lakes-row">
+        <span class="lake-chip">Lake Pleasant</span>
+        <span class="lake-chip">Roosevelt</span>
+        <span class="lake-chip">Apache</span>
+        <span class="lake-chip">Canyon</span>
+        <span class="lake-chip">Saguaro</span>
+        <span class="lake-chip">Bartlett</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap foot-grid">
     <div class="copy">© 2026 LimitLock · Built by TJ</div>
@@ -466,69 +478,16 @@
 </footer>
 
 <script>
-// Arizona-only b4u.fish promo: reveal section + populate mini 7-day forecast for AZ visitors only.
+// Arizona-only b4u.fish promo: reveal section for AZ visitors only.
 (function(){
   var section = document.getElementById('b4u-section');
-  var miniGrid = document.getElementById('b4u-mini-7day');
   if(!section) return;
-
-  function wmoIcon(code){
-    if(code===0) return '☀️';
-    if(code>=1 && code<=3) return '🌤️';
-    if(code===45 || code===48) return '🌫️';
-    if(code>=51 && code<=67) return '🌧️';
-    if(code>=71 && code<=77) return '🌨️';
-    if(code>=80 && code<=82) return '🌧️';
-    if(code>=85 && code<=86) return '🌨️';
-    if(code>=95) return '⛈️';
-    return '🌤️';
-  }
-  var dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-
-  function loadMiniForecast(){
-    if(!miniGrid) return;
-    var url = 'https://api.open-meteo.com/v1/forecast?latitude=33.68&longitude=-111.65' +
-              '&daily=temperature_2m_max,temperature_2m_min,wind_speed_10m_max,weather_code' +
-              '&temperature_unit=fahrenheit&wind_speed_unit=mph' +
-              '&timezone=America%2FPhoenix&forecast_days=7';
-    fetch(url).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
-      if(!d || !d.daily) return;
-      var dly = d.daily;
-      var html = '';
-      var bestIdx = 0, bestScore = -999;
-      for(var i=0;i<dly.time.length;i++){
-        var hi = Math.round(dly.temperature_2m_max[i]);
-        var lo = Math.round(dly.temperature_2m_min[i]);
-        var w = Math.round(dly.wind_speed_10m_max[i]);
-        var s = (hi-65) - Math.max(0,(w-8))*1.5;
-        if(s > bestScore){ bestScore = s; bestIdx = i; }
-      }
-      for(var j=0;j<dly.time.length;j++){
-        var date = new Date(dly.time[j]+'T12:00:00');
-        var dayShort = dayNames[date.getDay()];
-        var hi2 = Math.round(dly.temperature_2m_max[j]);
-        var lo2 = Math.round(dly.temperature_2m_min[j]);
-        var ic = wmoIcon(dly.weather_code[j]);
-        var pickClass = j===bestIdx ? ' pick' : '';
-        html += '<div class="day'+pickClass+'">'+
-                '<div class="day-name">'+dayShort+'</div>'+
-                '<div class="day-icon">'+ic+'</div>'+
-                '<div class="day-hi">'+hi2+'°</div>'+
-                '<div class="day-lo">Lo '+lo2+'</div>'+
-                '</div>';
-      }
-      miniGrid.innerHTML = html;
-    }).catch(function(){ /* silent */ });
-  }
-
-  // Geo-detect via free IP-API; reveal banner only for Arizona visitors
   fetch('https://ipapi.co/json/').then(function(r){ return r.ok ? r.json() : null; }).then(function(geo){
     if(!geo) return;
     var inAZ = (geo.country === 'US' && (geo.region_code === 'AZ' || geo.region === 'Arizona'));
     if(inAZ){
       section.style.display = 'block';
       section.setAttribute('aria-hidden','false');
-      loadMiniForecast();
     }
   }).catch(function(){ /* silent — non-AZ visitors just don't see the banner */ });
 })();

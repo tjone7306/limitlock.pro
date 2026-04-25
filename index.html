@@ -11,7 +11,8 @@
 <meta property="og:url" content="https://limitlock.pro/">
 <meta property="og:image" content="https://limitlock.pro/screenshots/01-bag.svg">
 <title>LimitLock — Tournament Fish Culling, Fast</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230b1715'/%3E%3Ctext x='32' y='44' text-anchor='middle' fill='%23E7C873' font-family='system-ui' font-weight='900' font-size='40'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="96x96" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 
 <style>
   :root {
@@ -43,11 +44,9 @@
   .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
   .brand { display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:0.5px; }
   .brand-mark {
-    width: 32px; height: 32px; border-radius: 8px;
-    background: linear-gradient(135deg, #0f201d 0%, #14302c 100%);
-    display:grid; place-items:center; color: var(--gold);
-    border: 1px solid rgba(231,200,115,0.35);
-    font-weight: 900; font-size: 18px;
+    width: 36px; height: 36px; border-radius: 9px;
+    display:block;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
   }
   .nav a.link { color: var(--muted); margin-left: 22px; font-weight: 600; font-size: 14px; }
   .nav a.link:hover { color: var(--ink); }
@@ -82,7 +81,7 @@
   .app-badge svg { width: 26px; height: 30px; }
 
   .hero-phone { position: relative; justify-self:center; }
-  .hero-phone svg { width: 340px; filter: drop-shadow(0 40px 60px rgba(0,0,0,0.6)); }
+  .hero-phone img { width: 340px; filter: drop-shadow(0 40px 60px rgba(0,0,0,0.6)); }
 
   /* SECTIONS */
   section { padding: 88px 0; }
@@ -141,6 +140,70 @@
   .live-shot { justify-self:center; }
   .live-shot img { width: 320px; filter: drop-shadow(0 30px 50px rgba(0,0,0,0.5)); }
 
+  /* B4U.FISH AZ-ONLY BANNER */
+  .b4u {
+    display: none; /* revealed by JS only for Arizona visitors */
+    background:
+      radial-gradient(700px 360px at 15% 30%, rgba(231,200,115,0.10), transparent 65%),
+      linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+    border-top: 1px solid rgba(231,200,115,0.10);
+    border-bottom: 1px solid rgba(231,200,115,0.10);
+  }
+  .b4u-grid { display:grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items:center; }
+  .b4u .badge {
+    display:inline-flex; align-items:center; gap:8px;
+    padding: 6px 12px; border-radius: 999px;
+    background: rgba(231,200,115,0.12); border: 1px solid rgba(231,200,115,0.35);
+    color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .b4u h2 { font-size: 40px; line-height: 1.05; margin: 0 0 14px; letter-spacing:-0.02em; font-weight: 900; }
+  .b4u h2 .accent { color: var(--gold); }
+  .b4u p.lead { color: var(--muted); font-size: 17px; line-height: 1.55; margin-bottom: 22px; max-width: 520px; }
+  .b4u .cta {
+    display:inline-flex; align-items:center; gap: 10px;
+    background: var(--gold); color: #0a0a0a;
+    padding: 12px 22px; border-radius: 12px;
+    font-weight: 800; font-size: 15px; letter-spacing: 0.2px;
+    transition: transform .12s ease;
+  }
+  .b4u .cta:hover { transform: translateY(-1px); color:#0a0a0a; }
+  .b4u .cta-row { display:flex; align-items:center; gap: 16px; flex-wrap:wrap; }
+  .b4u .domain { color: var(--muted); font-size: 13px; font-family: ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .b4u .preview {
+    background: linear-gradient(180deg, rgba(20,48,44,0.55), rgba(15,32,29,0.4));
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.45);
+  }
+  .b4u .preview-head { display:flex; align-items:center; justify-content:space-between; margin-bottom: 14px; }
+  .b4u .preview-title { font-weight: 800; font-size: 14px; }
+  .b4u .preview-status { font-size: 11px; color: var(--green); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+  .b4u .day-tiles { display:grid; grid-template-columns: repeat(7, 1fr); gap: 5px; }
+  .b4u .day {
+    background: rgba(15,32,29,0.85);
+    border: 1px solid rgba(231,200,115,0.10);
+    border-radius: 8px;
+    padding: 10px 4px 8px;
+    text-align:center;
+  }
+  .b4u .day.pick { border-color: rgba(125,227,125,0.5); background: linear-gradient(180deg, rgba(125,227,125,0.10), rgba(15,32,29,0.85)); }
+  .b4u .day-name { font-size: 9px; color: var(--muted); font-weight: 800; letter-spacing:0.1em; text-transform:uppercase; }
+  .b4u .day-icon { font-size: 18px; margin: 4px 0 2px; }
+  .b4u .day-hi { font-size: 16px; font-weight: 800; color: var(--ink); }
+  .b4u .day-lo { font-size: 10px; color: var(--muted); }
+  .b4u .lakes-row {
+    display:flex; gap: 8px; flex-wrap:wrap; margin-top: 14px;
+    padding-top: 14px; border-top: 1px solid rgba(231,200,115,0.08);
+  }
+  .b4u .lake-chip {
+    background: rgba(15,32,29,0.7);
+    border: 1px solid rgba(231,200,115,0.14);
+    padding: 5px 10px; border-radius: 999px;
+    font-size: 11px; color: var(--muted);
+  }
+
   /* SCREENSHOTS */
   .shots { background: var(--bg-deep); }
   .shot-grid {
@@ -186,13 +249,16 @@
     .hero-grid { grid-template-columns: 1fr; gap: 30px; }
     h1 { font-size: 46px; }
     .hero-phone { order: -1; }
-    .hero-phone svg { width: 260px; }
+    .hero-phone img { width: 260px; }
     .f-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
     .shot-grid { grid-template-columns: repeat(2, 1fr); }
     .live-grid { grid-template-columns: 1fr; gap: 30px; }
     .live-shot { order: -1; }
     .live-shot img { width: 240px; }
     .live h2 { font-size: 34px; }
+    .b4u-grid { grid-template-columns: 1fr; gap: 30px; }
+    .b4u h2 { font-size: 32px; }
+    .b4u .day-tiles { grid-template-columns: repeat(7, 1fr); }
     section { padding: 64px 0; }
     .nav a.link { display:none; }
   }
@@ -210,7 +276,7 @@
 <nav class="nav">
   <div class="wrap nav-inner">
     <div class="brand">
-      <div class="brand-mark">L</div>
+      <img class="brand-mark" src="icon-192.png" alt="LimitLock app icon" width="36" height="36">
       <span>LimitLock</span>
     </div>
     <div>
@@ -302,7 +368,40 @@
   </div>
 </section>
 
-<section class="shots" id="screenshots">
+<!-- B4U.FISH cross-promo (revealed by JS only for Arizona visitors) -->
+<section class="b4u" id="b4u-section" aria-hidden="true">
+  <div class="wrap b4u-grid">
+    <div>
+      <span class="badge">🎣 Fishing in Arizona?</span>
+      <h2>Get the <span class="accent">7-day forecast</span> for the Phoenix lakes.</h2>
+      <p class="lead">Our sister site <strong>b4u.fish</strong> shows live conditions for Pleasant, Roosevelt, Apache, Canyon, Saguaro, and Bartlett — best fishing times, weather, lake levels, and a clean 7-day outlook so you can pick the right day before you load the boat.</p>
+      <div class="cta-row">
+        <a class="cta" href="https://b4u.fish/" target="_blank" rel="noopener">
+          Open b4u.fish
+          <span aria-hidden="true">→</span>
+        </a>
+        <span class="domain">b4u.fish</span>
+      </div>
+    </div>
+    <div class="preview" aria-hidden="true">
+      <div class="preview-head">
+        <div class="preview-title">Phoenix Lakes · 7-Day Outlook</div>
+        <div class="preview-status">● Live</div>
+      </div>
+      <div class="day-tiles" id="b4u-mini-7day">
+        <!-- Mini 7-day tiles populated by JS (only for AZ visitors) -->
+      </div>
+      <div class="lakes-row">
+        <span class="lake-chip">Lake Pleasant</span>
+        <span class="lake-chip">Roosevelt</span>
+        <span class="lake-chip">Apache</span>
+        <span class="lake-chip">Canyon</span>
+        <span class="lake-chip">Saguaro</span>
+        <span class="lake-chip">Bartlett</span>
+      </div>
+    </div>
+  </div>
+</section>
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Screens</div>
@@ -365,6 +464,75 @@
     </div>
   </div>
 </footer>
+
+<script>
+// Arizona-only b4u.fish promo: reveal section + populate mini 7-day forecast for AZ visitors only.
+(function(){
+  var section = document.getElementById('b4u-section');
+  var miniGrid = document.getElementById('b4u-mini-7day');
+  if(!section) return;
+
+  function wmoIcon(code){
+    if(code===0) return '☀️';
+    if(code>=1 && code<=3) return '🌤️';
+    if(code===45 || code===48) return '🌫️';
+    if(code>=51 && code<=67) return '🌧️';
+    if(code>=71 && code<=77) return '🌨️';
+    if(code>=80 && code<=82) return '🌧️';
+    if(code>=85 && code<=86) return '🌨️';
+    if(code>=95) return '⛈️';
+    return '🌤️';
+  }
+  var dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  function loadMiniForecast(){
+    if(!miniGrid) return;
+    var url = 'https://api.open-meteo.com/v1/forecast?latitude=33.68&longitude=-111.65' +
+              '&daily=temperature_2m_max,temperature_2m_min,wind_speed_10m_max,weather_code' +
+              '&temperature_unit=fahrenheit&wind_speed_unit=mph' +
+              '&timezone=America%2FPhoenix&forecast_days=7';
+    fetch(url).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
+      if(!d || !d.daily) return;
+      var dly = d.daily;
+      var html = '';
+      var bestIdx = 0, bestScore = -999;
+      for(var i=0;i<dly.time.length;i++){
+        var hi = Math.round(dly.temperature_2m_max[i]);
+        var lo = Math.round(dly.temperature_2m_min[i]);
+        var w = Math.round(dly.wind_speed_10m_max[i]);
+        var s = (hi-65) - Math.max(0,(w-8))*1.5;
+        if(s > bestScore){ bestScore = s; bestIdx = i; }
+      }
+      for(var j=0;j<dly.time.length;j++){
+        var date = new Date(dly.time[j]+'T12:00:00');
+        var dayShort = dayNames[date.getDay()];
+        var hi2 = Math.round(dly.temperature_2m_max[j]);
+        var lo2 = Math.round(dly.temperature_2m_min[j]);
+        var ic = wmoIcon(dly.weather_code[j]);
+        var pickClass = j===bestIdx ? ' pick' : '';
+        html += '<div class="day'+pickClass+'">'+
+                '<div class="day-name">'+dayShort+'</div>'+
+                '<div class="day-icon">'+ic+'</div>'+
+                '<div class="day-hi">'+hi2+'°</div>'+
+                '<div class="day-lo">Lo '+lo2+'</div>'+
+                '</div>';
+      }
+      miniGrid.innerHTML = html;
+    }).catch(function(){ /* silent */ });
+  }
+
+  // Geo-detect via free IP-API; reveal banner only for Arizona visitors
+  fetch('https://ipapi.co/json/').then(function(r){ return r.ok ? r.json() : null; }).then(function(geo){
+    if(!geo) return;
+    var inAZ = (geo.country === 'US' && (geo.region_code === 'AZ' || geo.region === 'Arizona'));
+    if(inAZ){
+      section.style.display = 'block';
+      section.setAttribute('aria-hidden','false');
+      loadMiniForecast();
+    }
+  }).catch(function(){ /* silent — non-AZ visitors just don't see the banner */ });
+})();
+</script>
 
 </body>
 </html>
